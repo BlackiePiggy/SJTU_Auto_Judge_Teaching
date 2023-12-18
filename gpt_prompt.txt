@@ -1,0 +1,13 @@
+我使用的是edge浏览器。请帮我用selenium写一个程序，实现以下功能。
+打开网页http://yjs.sjtu.edu.cn/gsapp/sys/wspjapp/*default/index.do?EMAP_LANG=zh#/wspj
+等待回车键被按下，然后再开始进行下面的操作：
+1.如果网页中有<a href="javascript:" id="guideShut" role="button" style="position: fixed; top: 10px; right: 10px; color: rgb(255, 255, 255); z-index: 30003;">关闭</a>元素，点击它。
+遍历网页中class=sc-panel-diagonalStrips sc-panel-warning 的div元素，如果其class=sc-panel-diagonalStrips-bar的div子元素文字内容为"未评教"，则鼠标左键单击该div元素。
+2.待跳转到新的网页后，对新的网页进行操作。
+如果网页中有<a href="javascript:" id="guideShut" role="button" style="position: fixed; top: 10px; right: 10px; color: rgb(255, 255, 255); z-index: 30003;">关闭</a>元素，点击它。
+找到网页中所有的元素：<div class="bh-radio bh-radio-group-v">。遍历每个元素，滑动网页，确保点击前该元素在网页可见区域，然后对这些元素的第一个子label元素进行单击。
+并对网页中的“<textarea role="pj_form_text" id="wb_3183caeab2f443108e8849e1486ef332" class="paper_tk"></textarea>”元素进行自动填写内容：“老师非常棒，期待下次再上老师的课！”
+填写完成后，找到网页中的元素：<a href="javascript:void(0);" class="bh-btn bh-btn-primary" data-action="提交">提交</a>，单击该元素。
+等待0.5s，然后选择网页中的元素：<a href="javascript:void(0);" class="bh-dialog-btn bh-bg-primary bh-color-primary-5">确定</a>。单击。
+等待网页自动跳转，然后继续回到开头程序开头，如此循环。
+
